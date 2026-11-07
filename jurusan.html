@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurusan SMKN 1 Kota Bekasi</title>
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #222;
+}
+
+/* CONTAINER */
+.container2 {
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    height: 70px;
+    background: #0d47a1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 8px 5px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* BODY */
+.body {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 70px 0;
+}
+
+/* JUDUL */
+.Judul {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.Judul h1 {
+    color: #0d47a1;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+/* GARIS BAWAH JUDUL */
+.Judul::after {
+    content: "";
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    background: #ffcc00;
+
+    margin: 0 auto;
+
+    border-radius: 10px;
+}
+
+/* TABLE CARD */
+.tabeljurusan {
+    width: 100%;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+/* IFRAME */
+.tabeljurusan iframe {
+    width: 100%;
+    height: 450px;
+
+    border: none;
+
+    display: block;
+}
+
+    </style>
+    <div class="container2">
+         <header>
+            <div class="logo">
+             <img src="images/logo.png" alt="logo smkn 1" width="30px">
+              SMKN 1 Kota Bekasi  
+            </div>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="jurusan.html">Jurusan</a>
+                <a href="eskul.html">Eskul</a>
+            </nav>
+        </header>
+
+        <div class="body">
+            <div class="Judul">
+                <h1>Program Kompetensi Yang Tersedia</h1>
+            </div>
+
+            <div class="tabeljurusan">
+                <iframe src="tabeljurusan.html" width="50%" height="250px"></iframe>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

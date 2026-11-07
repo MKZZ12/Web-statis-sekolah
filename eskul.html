@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        /* =========================
+   HALAMAN EKSKUL
+========================= */
+
+.container3 {
+    min-height: 100vh;
+    background-color: #f3f6fa;
+}
+
+/* HEADER */
+
+.container3 header {
+    height: 70px;
+
+    background-color: #0d47a1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGO */
+
+.container3 .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.container3 .logo img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+
+/* NAVIGASI */
+
+.container3 nav {
+    display: flex;
+    gap: 30px;
+}
+
+.container3 nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 8px 5px;
+
+    transition: 0.3s;
+}
+
+.container3 nav a:hover {
+    color: #ffcc00;
+}
+
+/* BODY */
+
+.container3 .body {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 60px 0;
+}
+
+/* CONTAINER EKSKUL */
+
+.eskul {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+/* CARD */
+
+.eskul > div {
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    border: 1px solid #e5e9f0;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* GARIS BIRU DI ATAS CARD */
+
+.eskul > div::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background-color: #0d47a1;
+}
+
+/* HOVER CARD */
+
+.eskul > div:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* JUDUL EKSKUL */
+
+.juduleskul {
+    margin-bottom: 15px;
+}
+
+.juduleskul h1 {
+    color: #0d47a1;
+
+    font-size: 22px;
+
+    margin: 0;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #e8edf5;
+}
+
+/* PENJELASAN */
+
+.penjelasan p {
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+    margin: 0;
+}
+
+/* CARD PERTAMA FULL WIDTH */
+
+.mpk {
+    grid-column: span 2;
+}
+
+.osis {
+    grid-column: span 2;
+}
+
+    </style>
+    <div class="container3">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="logo smkn 1" width="30px">
+              SMKN 1 Kota Bekasi  
+            </div>
+            <nav>
+                <a href="index.html">About</a>
+                <a href="jurusan.html">Jurusan</a>
+                <a href="eskul.html">Eskul</a>
+            </nav>
+        </header>
+
+
+        <div class="body">
+            <div class="containe eskul">
+                <div class="mpk">
+                    <div class="juduleskul">
+                        <h1>MPK</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>MPK SMK Negeri 1 Kota Bekasi didirikan pada 12 September 2023 sebagai wadah penyampaian aspirasi siswa kepada OSIS dan sekolah. Awalnya bernama Majelis Perwakilan Kelas, kemudian berubah menjadi Majelis Permusyawaratan Kelas pada 2024. MPK memiliki BPH dan perwakilan ketua kelas, dengan Angkatan Perintis 2023 dipimpin Fatturrahman dan Irgi, Angkatan Pertama 2024 dipimpin Irgi dan Syafa, dan Angkatan Kedua 2025 dipimpin Yusuf dan Nada. Seiring berkembangnya organisasi, MPK membentuk komisi untuk memperjelas pembagian tugas dan pengelolaan aspirasi. MPK juga bekerja sama dengan OSIS dalam kegiatan seperti MPLS, classmeeting, dan berbagai event sekolah, serta terus berkembang sebagai wadah aspirasi dan pengawasan siswa.</p>
+                    </div>
+                </div>
+
+                <div class="osis">
+                    <div class="juduleskul">
+                        <h1>OSIS</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>OSIS SMK Negeri 1 Kota Bekasi merupakan wadah pembinaan siswa dalam mengembangkan minat, bakat, potensi, kepemimpinan, serta menjadi penghubung antara siswa, ekstrakurikuler, dan sekolah. OSIS berdiri sejak 1997, bersamaan dengan berdirinya sekolah yang dahulu bernama STM Negeri 1 Kota Bekasi. Seiring perkembangan sekolah, OSIS juga mengalami perkembangan dalam struktur, seksi bidang, AD/ART, dan program kerja di bidang akademik, sosial, seni, olahraga, serta kepemimpinan. Dalam lima tahun terakhir, OSIS aktif melaksanakan Rapat Koordinasi dan Sidang Pleno, kegiatan sosial panti asuhan, Classmeeting Ganjil dan Genap, Berkilau, MPLS, peringatan HUT RI ke-81, Open Recruitment OSIS, Hari Guru Nasional, LDKO, serta Serah Terima Jabatan (Sertijab). Berbagai kegiatan tersebut menjadi sarana pengembangan kreativitas, kepedulian sosial, sportivitas, kepemimpinan, kerja sama, serta regenerasi organisasi siswa.</p>
+                    </div>
+                </div>
+
+                <div class="ops">
+                    <div class="juduleskul">
+                        <h1>OPS</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Organisasi Perpustakaan Sekolah (OPS) SMK Negeri 1 Kota Bekasi berdiri pada tahun 1997 bersamaan dengan berdirinya sekolah. Awalnya, organisasi ini bernama ADP (Anggota Dewan Perpustakaan) yang dibentuk untuk membantu mengelola dan mengembangkan perpustakaan sekolah. Pada tahun 2014, setelah Ibu Dra. Renny Astuti dipercaya sebagai Kepala Perpustakaan, ADP berganti nama menjadi OPS (Organisasi Perpustakaan Sekolah). Hingga kini, OPS berperan membantu pengelolaan serta pengembangan perpustakaan sekolah.</p>
+                    </div>
+                </div>
+
+                <div class="jurnalis">
+                    <div class="juduleskul">
+                        <h1>JURNALIS</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Jurnalis SMK Negeri 1 Kota Bekasi merupakan wadah siswa dalam bidang jurnalistik, kepenulisan, fotografi, videografi, dan penyampaian informasi. Berada di bawah naungan Kepala SMK Negeri 1 Kota Bekasi, Jurnalis berperan sebagai media dokumentasi, informasi, dan publikasi melalui website serta media sosial sekolah. Kegiatannya meliputi peliputan, wawancara, fotografi, videografi, editing, desain grafis, dan penulisan artikel yang bekerja sama dengan OPS. Melalui kegiatan tersebut, Jurnalis menjadi wadah pengembangan kreativitas, komunikasi, kerja sama, dan kemampuan siswa dalam menyampaikan informasi secara faktual dan bertanggung jawab.</p>
+                    </div>
+                </div>
+
+                <div class="irma">
+                    <div class="juduleskul">
+                        <h1>IRMA</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>IRMA (Ikatan Remaja Masjid) SMK Negeri 1 Kota Bekasi merupakan organisasi keagamaan yang menjadi wadah siswa dalam meningkatkan pemahaman dan pengamalan nilai-nilai Islam. IRMA berdiri sekitar tahun 1997, tidak lama setelah berdirinya SMK Negeri 1 Kota Bekasi, untuk mengembangkan kegiatan keagamaan dan memberikan ruang bagi siswa untuk beraktivitas dalam suasana Islami. Dalam perkembangannya, IRMA melaksanakan berbagai kegiatan seperti kajian keislaman, membaca Al-Qur’an, kegiatan Ramadan, serta kegiatan sosial dan keagamaan lainnya. Melalui kegiatan tersebut, IRMA turut mengembangkan tanggung jawab, kepemimpinan, kerja sama, dan kepedulian siswa terhadap sesama.</p>
+                    </div>
+                </div>
+
+                <div class="anderpati">
+                    <div class="juduleskul">
+                        <h1>ANDERPATI</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>ANDERPATI merupakan ekstrakurikuler teater dan jurnalistik yang didirikan pada 2 November 2010 di ruang Tata Busana. Nama ANDERPATI berarti “Pemberani” dengan slogan Bandhawa Catha, Bandhawa Derpat, Bandhawa Enteng Tangane yang berarti Saudara Kreatif, Saudara Berani, dan Saudara Saling Membantu. Dalam perkembangannya, ANDERPATI aktif mengikuti perlombaan, tampil dalam berbagai acara, dan latihan gabungan bersama teater pelajar di Bekasi. Kegiatannya terbagi dalam divisi Artistik (naskah, kostum, makeup), Produksi (properti, rundown, sound), serta Media & Komunikasi (pengumuman, dokumentasi, poster).</p>
+                    </div>
+                </div>
+
+                <div class="drupadi">
+                    <div class="juduleskul">
+                        <h1>DRUPADI</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Drupadi Art Dance merupakan ekstrakurikuler seni tari tradisional SMK Negeri 1 Kota Bekasi yang didirikan pada tahun 2015 sebagai wadah siswa untuk mengembangkan minat dan bakat dalam seni tari. Melalui latihan rutin dan pertunjukan di dalam maupun luar sekolah, Drupadi turut menumbuhkan kecintaan terhadap budaya, kepercayaan diri, kreativitas, dan kekompakan anggota. Nama Drupadi terinspirasi dari tokoh perempuan tangguh dalam Mahabharata yang melambangkan keberanian, kecantikan, dan keteguhan. Logo Drupadi menampilkan siluet penari dengan ornamen warna-warni yang melambangkan kekuatan, keanggunan, semangat, energi, serta keberagaman budaya dalam seni tari.</p>
+                    </div>
+                </div>
+
+                <div class="englishclub">
+                    <div class="juduleskul">
+                        <h1>ENGLISH CLUB</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>English Club (EC) SMK Negeri 1 Kota Bekasi berdiri sejak tahun 2012 sebagai wadah siswa untuk meningkatkan kemampuan berbahasa Inggris dan kepercayaan diri dalam berkomunikasi. Awalnya hanya memiliki 5–6 anggota aktif, namun terus berkembang hingga mencapai sekitar 90 anggota. Setelah pandemi COVID-19, sistem kepengurusan disusun kembali dengan periode mengikuti tahun kalender dan menerapkan regenerasi kepemimpinan agar kegiatan tetap berjalan saat siswa kelas XI melaksanakan PKL. Dalam perkembangannya, English Club aktif mengembangkan kemampuan anggota melalui berbagai kegiatan dan pernah mengikuti lomba Storytelling pada tahun 2025 yang diwakili oleh Kak Nasywa dan Kak Mathilda. Saat ini, English Club diketuai oleh Kak Clarissa Widyatri Bestari dan terus berkembang sebagai wadah pembelajaran, komunikasi, serta pengembangan kepercayaan diri siswa dalam berbahasa Inggris.</p>
+                    </div>
+                </div>
+
+                <div class="inori">
+                    <div class="juduleskul">
+                        <h1>INORI</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Ichiban No Hikari (INORI) merupakan ekstrakurikuler bahasa dan budaya Jepang yang didirikan pada 2009 dengan nama Japanese Club oleh Ersandi Sulaiman, kemudian berganti nama menjadi Ichiban No Hikari pada 2010. INORI menjadi wadah siswa untuk belajar bahasa Jepang, budaya, kreativitas, serta bersosialisasi. Kegiatannya meliputi pembelajaran bersama sensei, Inori Sport, Sharing, Yakiniku, Kunjungan, Wara-Wiri, dan Tahun Baru. Program terbesar INORI adalah Inori Bunkasai (INOSAI), festival budaya Jepang yang digagas pada 2013 dan telah diselenggarakan sebanyak enam kali.</p>
+                    </div>
+                </div>
+
+                <div class="musik">
+                    <div class="juduleskul">
+                        <h1>MUSIK</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Estrakulikuler Seni Musik merupakan wadah bagi siswa/siswi yang memiliki minat dan bakat dalam bidang bermusik (Memainkan alat musik dan vokal suara) yang mencakup beberapa genre musik. Biasanya eskul ini juga tampil pada event dan hari besar yang diadakan disekolah maupun diluar sekolah</p>
+                    </div>
+                </div>
+
+                <div class="paskibra">
+                    <div class="juduleskul">
+                        <h1>PASKIBRA</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Paskibra KANSAS merupakan kesatuan Paskibra SMK Negeri 1 Kota Bekasi yang berarti Pasukan Satu Kota Bekasi. KANSAS resmi berdiri bersamaan dengan berdirinya SMK Negeri 1 Kota Bekasi pada tahun 1997 dan kini telah memiliki 27 generas. Dalam perkembangannya, KANSAS aktif dalam upacara sekolah, seleksi PPI Kota Bekasi, serta berbagai perlombaan LKBB. Periode 2015–2018 menjadi salah satu masa keemasan dengan berbagai prestasi juara umum. KANSAS juga menyelenggarakan LKBB PISTON pada 2018 dan pada 2026 mengalami pergantian pelatih dari Dwiky Adi kepada Andrian Iskandar.</p>
+                    </div>
+                </div>
+
+                <div class="pmr">
+                    <div class="juduleskul">
+                        <h1>PMR</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>PMR SMKN 1 Kota Bekasi didirikan pada 5 Oktober 1998 sebagai wadah siswa dalam bidang kesehatan, kemanusiaan, dan sosial. Kegiatannya berfokus pada Pertolongan Pertama (PP), Perawatan Keluarga (PK), dan Tandu, serta aktif dalam kegiatan kepalangmerahan, sosial, kesehatan, dan perlombaan seperti VORES. Hingga kini, PMR terus berkembang dalam membentuk keterampilan, kepedulian sosial, kedisiplinan, kerja sama, dan jiwa kemanusiaan siswa.</p>
+                    </div>
+                </div>
+
+                <div class="pramuka">
+                    <div class="juduleskul">
+                        <h1>PRAMUKA</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Pramuka SMKN 1 Kota Bekasi berdiri sejak 1996 dengan nama YOSUMA (Yos Sudarso–Marta Kristina Tiahahu). Pada 10 Maret 2018, berganti menjadi RESIDIEN (Raden Kian Santang–Cut Nyak Dien) yang menjadi identitas hingga kini. Pramuka menjadi wadah pembentukan karakter melalui kemandirian, kedisiplinan, tanggung jawab, kerja sama, kepemimpinan, dan kepedulian sosial. BPH sendiri terdiri atas Pradana sebagai pemimpin dan koordinator Ambalan; Pangdat sebagai pengelola data anggota; Kerani sebagai pengelola administrasi; Hartaka sebagai pengelola keuangan; Tekpram sebagai pengelola latihan dan keterampilan kepramukaan; Humas sebagai penghubung internal dan eksternal; Sarpras sebagai pengelola perlengkapan; Kominfo sebagai pengelola informasi, publikasi, dan dokumentasi; KWU sebagai pengelola kewirausahaan; serta Anggota Ambalan sebagai pelaksana dan pendukung kegiatan.</p>
+                    </div>
+                </div>
+
+                <div class="atletik">
+                    <div class="juduleskul">
+                        <h1>ATLETIK</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Ekstrakurikuler Atletik (Billabong) SMKN 1 Kota Bekasi mulai dirintis oleh Bapak Syifa Fahmi Ramadhan (Pak Fahmi) pada 2022 sebagai wadah olahraga dan kebugaran siswa. Pada 2023, kegiatan mulai dikembangkan menjadi ekstrakurikuler meski sempat terkendala jumlah anggota dan administrasi. Billabong resmi menjadi ekstrakurikuler pada 2024 dan mendapat kesempatan tampil dalam MPLS yang meningkatkan minat siswa untuk bergabung. Sejak itu, Billabong terus berkembang dari kegiatan kebugaran menjadi wadah pengembangan kemampuan, kebersamaan, dan prestasi atletik siswa.</p>
+                    </div>
+                </div>
+
+                <div class="basket">
+                    <div class="juduleskul">
+                        <h1>BASKET</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>ROCK IN ONE BASKETBALL. Rock In One adalah nama ekstrakurikuler basket di SMKN 1 KOTA BEKASI yang sebelumnya bernama Satoe Basketball kemudian berganti nama menjadi Rock In One (RIO) Basketball. Rock berarti batu (basket satu) yang memiliki artian keras dalam posisi defense dan ditambah dengan In One yang memiliki filosofi bersatu atau bersama</p>
+                    </div>
+                </div>
+
+                <div class="futsal">
+                    <div class="juduleskul">
+                        <h1>FUTSAL</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Ekstrakurikuler Futsal SMKN 1 Kota Bekasi berdiri sejak 2017 sebagai wadah siswa mengembangkan kemampuan eknik, fisik, kerja sama, dan sportivitas melalui olahraga futsal. Seiring perkembangannya, Futsal berhasil meraih berbagai prestasi tingkat Kota Bekasi hingga Jabodetabek, termasuk mewakili Kota Bekasi pada LKS tingkat Provinsi, Juara 1 Ghanior Futsal League 2025 kategori putra, serta Juara 1 Edufest Vol. 4.1 2026 kategori putri, dengan raihan Best Player, Best Coach, dan Best Goalkeeper.</p>
+                    </div>
+                </div>
+
+                <div class="silat">
+                    <div class="juduleskul">
+                        <h1>SILAT</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Perguruan silat yang terdiri di SMKN 1 Bekasi adalah perguruan Pusaka Siliwangi yang didirikan pada tanggal 15 April 2004 oleh Bapak Arief Abdul Rachman, S.E. Pusaka Siliwangi beraliran Betawi Cimande. Pencak silat mengajarkan ilmu bela diri, pernafasan, dll. Perguruan Pusaka Siliwangi sendiri sudah melaksanakan metode penataan Atlet mulai dari Atlet seni tunggal IPSI, ganda, beregu IPSI dan tim atraksi debus tradisional</p>
+                    </div>
+                </div>
+
+                <div class="volsat">
+                    <div class="juduleskul">
+                        <h1>VOLSAT</h1>
+                    </div>
+                    <div class="penjelasan">
+                        <p>Ekstrakurikuler Bola Voli SMKN 1 Kota Bekasi berdiri sejak 2003 sebagai wadah siswa mengembangkan minat dan bakat dalam olahraga bola voli. Kegiatannya berfokus pada latihan servis, passing, smash, dan blocking, sekaligus membentuk kebugaran, kerja sama, kedisiplinan, tanggung jawab, dan sportivitas. Seiring perkembangan anggota dan latihan yang semakin teratur, Voli mulai aktif mengikuti berbagai pertandingan antar sekolah serta terus melakukan regenerasi anggota setiap tahun.</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
