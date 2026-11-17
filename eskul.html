@@ -23,17 +23,13 @@
 /* HEADER */
 
 .container3 header {
-    min-height: 70px;
-  
-    background-color: #0d47a1;
-
+    height: 64px;
+    background-color: #123b78;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 10px 60px;
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    padding: 0 32px;
+    color: white;
 }
 
 /* LOGO */
@@ -42,17 +38,13 @@
     display: flex;
     align-items: center;
     gap: 12px;
-
-    color: white;
-
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 700;
 }
-
 .container3 .logo img {
-    width: 70px;
-    height: 70px;
-
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -61,25 +53,32 @@
 
 .container3 nav {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 28px;
 }
 
 .container3 nav a {
+    position: relative;
     color: white;
     text-decoration: none;
-
-    font-size: 20px;
-    font-weight: bold;
-
-    padding: 8px 5px;
-
-    transition: 0.3s;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 22px 0;
 }
 
 .container3 nav a:hover {
-    color: #ffcc00;
+    color: #ff9932;
 }
 
+.container3 a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    height: 2px;
+    background-color: #ffd43b;
+}
 /* BODY */
 
 .container3 .body {
@@ -168,7 +167,7 @@
 .penjelasan p {
     color: #555;
 
-    font-size: 20px;
+    font-size: 16px;
 
     line-height: 1.8;
 
@@ -187,6 +186,147 @@
     grid-column: span 2;
 }
 
+
+/* FOOTER */
+.footer {
+    margin-top: 60px;
+    background: #123b78;
+    color: white;
+}
+
+
+/* CONTAINER */
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 45px 0;
+}
+
+
+/* BRAND */
+.footer-brand {
+    flex: 1.5;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+}
+
+.footer-logo h2 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.footer-logo p {
+    margin: 4px 0 0;
+
+    color: #b9c9df;
+
+    font-size: 10px;
+}
+
+.footer-desc {
+    max-width: 350px;
+
+    margin-top: 18px;
+
+    color: #c7d4e7;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* MENU DAN KONTAK */
+.footer-menu,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 150px;
+}
+
+.footer h3 {
+    margin: 0 0 18px;
+
+    font-size: 14px;
+}
+
+.footer-menu a {
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    color: #c7d4e7;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.footer-menu a:hover {
+    color: #ff9932;
+}
+
+.footer-contact p {
+    margin: 0 0 10px;
+
+    color: #c7d4e7;
+
+    font-size: 11px;
+}
+
+
+/* COPYRIGHT */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+
+    padding: 15px;
+
+    color: #aebed3;
+
+    font-size: 10px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding: 35px 0;
+    }
+
+    .footer-brand {
+        flex: none;
+    }
+}
     </style>
     <div class="container3">
         <header>
@@ -197,7 +337,7 @@
             <nav>
                 <a href="index.html">About</a>
                 <a href="jurusan.html">Jurusan</a>
-                <a href="eskul.html">Eskul</a>
+                <a href="eskul.html" class="active">Eskul</a>
             </nav>
         </header>
 
@@ -206,7 +346,7 @@
             <div class="containe eskul">
                 <div class="mpk">
                     <div class="juduleskul">
-                        <h1>MPK</h1>
+                        <h1>MPK🏛️</h1>
                     </div>
                     <div class="penjelasan">
                         <p>MPK SMK Negeri 1 Kota Bekasi didirikan pada 12 September 2023 sebagai wadah penyampaian aspirasi siswa kepada OSIS dan sekolah. Awalnya bernama Majelis Perwakilan Kelas, kemudian berubah menjadi Majelis Permusyawaratan Kelas pada 2024. MPK memiliki BPH dan perwakilan ketua kelas, dengan Angkatan Perintis 2023 dipimpin Fatturrahman dan Irgi, Angkatan Pertama 2024 dipimpin Irgi dan Syafa, dan Angkatan Kedua 2025 dipimpin Yusuf dan Nada. Seiring berkembangnya organisasi, MPK membentuk komisi untuk memperjelas pembagian tugas dan pengelolaan aspirasi. MPK juga bekerja sama dengan OSIS dalam kegiatan seperti MPLS, classmeeting, dan berbagai event sekolah, serta terus berkembang sebagai wadah aspirasi dan pengawasan siswa.</p>
@@ -215,7 +355,7 @@
 
                 <div class="osis">
                     <div class="juduleskul">
-                        <h1>OSIS</h1>
+                        <h1>OSIS👥</h1>
                     </div>
                     <div class="penjelasan">
                         <p>OSIS SMK Negeri 1 Kota Bekasi merupakan wadah pembinaan siswa dalam mengembangkan minat, bakat, potensi, kepemimpinan, serta menjadi penghubung antara siswa, ekstrakurikuler, dan sekolah. OSIS berdiri sejak 1997, bersamaan dengan berdirinya sekolah yang dahulu bernama STM Negeri 1 Kota Bekasi. Seiring perkembangan sekolah, OSIS juga mengalami perkembangan dalam struktur, seksi bidang, AD/ART, dan program kerja di bidang akademik, sosial, seni, olahraga, serta kepemimpinan. Dalam lima tahun terakhir, OSIS aktif melaksanakan Rapat Koordinasi dan Sidang Pleno, kegiatan sosial panti asuhan, Classmeeting Ganjil dan Genap, Berkilau, MPLS, peringatan HUT RI ke-81, Open Recruitment OSIS, Hari Guru Nasional, LDKO, serta Serah Terima Jabatan (Sertijab). Berbagai kegiatan tersebut menjadi sarana pengembangan kreativitas, kepedulian sosial, sportivitas, kepemimpinan, kerja sama, serta regenerasi organisasi siswa.</p>
@@ -224,7 +364,7 @@
 
                 <div class="ops">
                     <div class="juduleskul">
-                        <h1>OPS</h1>
+                        <h1>OPS📚</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Organisasi Perpustakaan Sekolah (OPS) SMK Negeri 1 Kota Bekasi berdiri pada tahun 1997 bersamaan dengan berdirinya sekolah. Awalnya, organisasi ini bernama ADP (Anggota Dewan Perpustakaan) yang dibentuk untuk membantu mengelola dan mengembangkan perpustakaan sekolah. Pada tahun 2014, setelah Ibu Dra. Renny Astuti dipercaya sebagai Kepala Perpustakaan, ADP berganti nama menjadi OPS (Organisasi Perpustakaan Sekolah). Hingga kini, OPS berperan membantu pengelolaan serta pengembangan perpustakaan sekolah.</p>
@@ -233,7 +373,7 @@
 
                 <div class="jurnalis">
                     <div class="juduleskul">
-                        <h1>JURNALIS</h1>
+                        <h1>JURNALIS📰</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Jurnalis SMK Negeri 1 Kota Bekasi merupakan wadah siswa dalam bidang jurnalistik, kepenulisan, fotografi, videografi, dan penyampaian informasi. Berada di bawah naungan Kepala SMK Negeri 1 Kota Bekasi, Jurnalis berperan sebagai media dokumentasi, informasi, dan publikasi melalui website serta media sosial sekolah. Kegiatannya meliputi peliputan, wawancara, fotografi, videografi, editing, desain grafis, dan penulisan artikel yang bekerja sama dengan OPS. Melalui kegiatan tersebut, Jurnalis menjadi wadah pengembangan kreativitas, komunikasi, kerja sama, dan kemampuan siswa dalam menyampaikan informasi secara faktual dan bertanggung jawab.</p>
@@ -242,7 +382,7 @@
 
                 <div class="irma">
                     <div class="juduleskul">
-                        <h1>IRMA</h1>
+                        <h1>IRMA🕌</h1>
                     </div>
                     <div class="penjelasan">
                         <p>IRMA (Ikatan Remaja Masjid) SMK Negeri 1 Kota Bekasi merupakan organisasi keagamaan yang menjadi wadah siswa dalam meningkatkan pemahaman dan pengamalan nilai-nilai Islam. IRMA berdiri sekitar tahun 1997, tidak lama setelah berdirinya SMK Negeri 1 Kota Bekasi, untuk mengembangkan kegiatan keagamaan dan memberikan ruang bagi siswa untuk beraktivitas dalam suasana Islami. Dalam perkembangannya, IRMA melaksanakan berbagai kegiatan seperti kajian keislaman, membaca Al-Qur’an, kegiatan Ramadan, serta kegiatan sosial dan keagamaan lainnya. Melalui kegiatan tersebut, IRMA turut mengembangkan tanggung jawab, kepemimpinan, kerja sama, dan kepedulian siswa terhadap sesama.</p>
@@ -251,7 +391,7 @@
 
                 <div class="anderpati">
                     <div class="juduleskul">
-                        <h1>ANDERPATI</h1>
+                        <h1>ANDERPATI🎭</h1>
                     </div>
                     <div class="penjelasan">
                         <p>ANDERPATI merupakan ekstrakurikuler teater dan jurnalistik yang didirikan pada 2 November 2010 di ruang Tata Busana. Nama ANDERPATI berarti “Pemberani” dengan slogan Bandhawa Catha, Bandhawa Derpat, Bandhawa Enteng Tangane yang berarti Saudara Kreatif, Saudara Berani, dan Saudara Saling Membantu. Dalam perkembangannya, ANDERPATI aktif mengikuti perlombaan, tampil dalam berbagai acara, dan latihan gabungan bersama teater pelajar di Bekasi. Kegiatannya terbagi dalam divisi Artistik (naskah, kostum, makeup), Produksi (properti, rundown, sound), serta Media & Komunikasi (pengumuman, dokumentasi, poster).</p>
@@ -260,7 +400,7 @@
 
                 <div class="drupadi">
                     <div class="juduleskul">
-                        <h1>DRUPADI</h1>
+                        <h1>DRUPADI💃</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Drupadi Art Dance merupakan ekstrakurikuler seni tari tradisional SMK Negeri 1 Kota Bekasi yang didirikan pada tahun 2015 sebagai wadah siswa untuk mengembangkan minat dan bakat dalam seni tari. Melalui latihan rutin dan pertunjukan di dalam maupun luar sekolah, Drupadi turut menumbuhkan kecintaan terhadap budaya, kepercayaan diri, kreativitas, dan kekompakan anggota. Nama Drupadi terinspirasi dari tokoh perempuan tangguh dalam Mahabharata yang melambangkan keberanian, kecantikan, dan keteguhan. Logo Drupadi menampilkan siluet penari dengan ornamen warna-warni yang melambangkan kekuatan, keanggunan, semangat, energi, serta keberagaman budaya dalam seni tari.</p>
@@ -287,7 +427,7 @@
 
                 <div class="musik">
                     <div class="juduleskul">
-                        <h1>MUSIK</h1>
+                        <h1>MUSIK🎸</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Estrakulikuler Seni Musik merupakan wadah bagi siswa/siswi yang memiliki minat dan bakat dalam bidang bermusik (Memainkan alat musik dan vokal suara) yang mencakup beberapa genre musik. Biasanya eskul ini juga tampil pada event dan hari besar yang diadakan disekolah maupun diluar sekolah</p>
@@ -296,7 +436,7 @@
 
                 <div class="paskibra">
                     <div class="juduleskul">
-                        <h1>PASKIBRA</h1>
+                        <h1>PASKIBRA🫡</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Paskibra KANSAS merupakan kesatuan Paskibra SMK Negeri 1 Kota Bekasi yang berarti Pasukan Satu Kota Bekasi. KANSAS resmi berdiri bersamaan dengan berdirinya SMK Negeri 1 Kota Bekasi pada tahun 1997 dan kini telah memiliki 27 generas. Dalam perkembangannya, KANSAS aktif dalam upacara sekolah, seleksi PPI Kota Bekasi, serta berbagai perlombaan LKBB. Periode 2015–2018 menjadi salah satu masa keemasan dengan berbagai prestasi juara umum. KANSAS juga menyelenggarakan LKBB PISTON pada 2018 dan pada 2026 mengalami pergantian pelatih dari Dwiky Adi kepada Andrian Iskandar.</p>
@@ -305,7 +445,7 @@
 
                 <div class="pmr">
                     <div class="juduleskul">
-                        <h1>PMR</h1>
+                        <h1>PMR🩹</h1>
                     </div>
                     <div class="penjelasan">
                         <p>PMR SMKN 1 Kota Bekasi didirikan pada 5 Oktober 1998 sebagai wadah siswa dalam bidang kesehatan, kemanusiaan, dan sosial. Kegiatannya berfokus pada Pertolongan Pertama (PP), Perawatan Keluarga (PK), dan Tandu, serta aktif dalam kegiatan kepalangmerahan, sosial, kesehatan, dan perlombaan seperti VORES. Hingga kini, PMR terus berkembang dalam membentuk keterampilan, kepedulian sosial, kedisiplinan, kerja sama, dan jiwa kemanusiaan siswa.</p>
@@ -314,7 +454,7 @@
 
                 <div class="pramuka">
                     <div class="juduleskul">
-                        <h1>PRAMUKA</h1>
+                        <h1>PRAMUKA🏕️</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Pramuka SMKN 1 Kota Bekasi berdiri sejak 1996 dengan nama YOSUMA (Yos Sudarso–Marta Kristina Tiahahu). Pada 10 Maret 2018, berganti menjadi RESIDIEN (Raden Kian Santang–Cut Nyak Dien) yang menjadi identitas hingga kini. Pramuka menjadi wadah pembentukan karakter melalui kemandirian, kedisiplinan, tanggung jawab, kerja sama, kepemimpinan, dan kepedulian sosial. BPH sendiri terdiri atas Pradana sebagai pemimpin dan koordinator Ambalan; Pangdat sebagai pengelola data anggota; Kerani sebagai pengelola administrasi; Hartaka sebagai pengelola keuangan; Tekpram sebagai pengelola latihan dan keterampilan kepramukaan; Humas sebagai penghubung internal dan eksternal; Sarpras sebagai pengelola perlengkapan; Kominfo sebagai pengelola informasi, publikasi, dan dokumentasi; KWU sebagai pengelola kewirausahaan; serta Anggota Ambalan sebagai pelaksana dan pendukung kegiatan.</p>
@@ -323,7 +463,7 @@
 
                 <div class="atletik">
                     <div class="juduleskul">
-                        <h1>ATLETIK</h1>
+                        <h1>ATLETIK🏃</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Ekstrakurikuler Atletik (Billabong) SMKN 1 Kota Bekasi mulai dirintis oleh Bapak Syifa Fahmi Ramadhan (Pak Fahmi) pada 2022 sebagai wadah olahraga dan kebugaran siswa. Pada 2023, kegiatan mulai dikembangkan menjadi ekstrakurikuler meski sempat terkendala jumlah anggota dan administrasi. Billabong resmi menjadi ekstrakurikuler pada 2024 dan mendapat kesempatan tampil dalam MPLS yang meningkatkan minat siswa untuk bergabung. Sejak itu, Billabong terus berkembang dari kegiatan kebugaran menjadi wadah pengembangan kemampuan, kebersamaan, dan prestasi atletik siswa.</p>
@@ -332,7 +472,7 @@
 
                 <div class="basket">
                     <div class="juduleskul">
-                        <h1>BASKET</h1>
+                        <h1>BASKET🏀</h1>
                     </div>
                     <div class="penjelasan">
                         <p>ROCK IN ONE BASKETBALL. Rock In One adalah nama ekstrakurikuler basket di SMKN 1 KOTA BEKASI yang sebelumnya bernama Satoe Basketball kemudian berganti nama menjadi Rock In One (RIO) Basketball. Rock berarti batu (basket satu) yang memiliki artian keras dalam posisi defense dan ditambah dengan In One yang memiliki filosofi bersatu atau bersama</p>
@@ -341,7 +481,7 @@
 
                 <div class="futsal">
                     <div class="juduleskul">
-                        <h1>FUTSAL</h1>
+                        <h1>FUTSAL⚽</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Ekstrakurikuler Futsal SMKN 1 Kota Bekasi berdiri sejak 2017 sebagai wadah siswa mengembangkan kemampuan eknik, fisik, kerja sama, dan sportivitas melalui olahraga futsal. Seiring perkembangannya, Futsal berhasil meraih berbagai prestasi tingkat Kota Bekasi hingga Jabodetabek, termasuk mewakili Kota Bekasi pada LKS tingkat Provinsi, Juara 1 Ghanior Futsal League 2025 kategori putra, serta Juara 1 Edufest Vol. 4.1 2026 kategori putri, dengan raihan Best Player, Best Coach, dan Best Goalkeeper.</p>
@@ -350,7 +490,7 @@
 
                 <div class="silat">
                     <div class="juduleskul">
-                        <h1>SILAT</h1>
+                        <h1>SILAT🥋</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Perguruan silat yang terdiri di SMKN 1 Bekasi adalah perguruan Pusaka Siliwangi yang didirikan pada tanggal 15 April 2004 oleh Bapak Arief Abdul Rachman, S.E. Pusaka Siliwangi beraliran Betawi Cimande. Pencak silat mengajarkan ilmu bela diri, pernafasan, dll. Perguruan Pusaka Siliwangi sendiri sudah melaksanakan metode penataan Atlet mulai dari Atlet seni tunggal IPSI, ganda, beregu IPSI dan tim atraksi debus tradisional</p>
@@ -359,7 +499,7 @@
 
                 <div class="volsat">
                     <div class="juduleskul">
-                        <h1>VOLSAT</h1>
+                        <h1>VOLSAT🏐</h1>
                     </div>
                     <div class="penjelasan">
                         <p>Ekstrakurikuler Bola Voli SMKN 1 Kota Bekasi berdiri sejak 2003 sebagai wadah siswa mengembangkan minat dan bakat dalam olahraga bola voli. Kegiatannya berfokus pada latihan servis, passing, smash, dan blocking, sekaligus membentuk kebugaran, kerja sama, kedisiplinan, tanggung jawab, dan sportivitas. Seiring perkembangan anggota dan latihan yang semakin teratur, Voli mulai aktif mengikuti berbagai pertandingan antar sekolah serta terus melakukan regenerasi anggota setiap tahun.</p>
@@ -367,5 +507,50 @@
                 </div>
         </div>
     </div>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Logo SMKN 1 Kota Bekasi">
+
+                <div>
+                    <h2>SMKN 1 KOTA BEKASI</h2>
+                    <p>Sekolah Kejuruan Unggul</p>
+                </div>
+            </div>
+
+            <p class="footer-desc">
+                Mewujudkan lulusan yang kompeten, berkarakter,
+                inovatif, dan siap menghadapi dunia industri.
+            </p>
+        </div>
+
+
+        <div class="footer-menu">
+            <h3>Menu</h3>
+
+            <a href="index.html">About</a>
+            <a href="jurusan.html">Jurusan</a>
+            <a href="eskul.html">Eskul</a>
+        </div>
+
+
+        <div class="footer-contact">
+            <h3>Kontak</h3>
+
+            <p>📍 Kota Bekasi, Jawa Barat</p>
+            <p>📞 (021) 88951151</p>
+            <p>✉️ info@smkn1kotabekasi.sch.id</p>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        <p>© 2026 SMKN 1 Kota Bekasi</p>
+    </div>
+</footer>
 </body>
 </html>

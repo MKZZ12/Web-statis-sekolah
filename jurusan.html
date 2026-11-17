@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 body {
@@ -26,52 +27,61 @@ body {
 
 /* HEADER */
 header {
-    width: 100%;
-    min-height: 70px;
-    background: #0d47a1;
+    height: 64px;
+    background-color: #123b78;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 60px;
+    padding: 0 32px;
+    color: white;
 
 }
 
 /* LOGO */
 .logo {
-    display: flex;
+  display: flex;
     align-items: center;
     gap: 12px;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 700;
 }
 
 .logo img {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
 /* NAVIGATION */
 nav {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 28px;
 }
 
 nav a {
+    position: relative;
     color: white;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 5px;
-    transition: 0.3s;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 22px 0;
 }
 
 nav a:hover {
-    color: #ffcc00;
+    color: #ff9932;
 }
 
-
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    height: 2px;
+    background-color: #ffd43b;
+}
 /* BODY */
 .body {
     width: 90%;
@@ -121,6 +131,146 @@ nav a:hover {
     display: block;
 }
 
+/* FOOTER */
+.footer {
+    margin-top: 60px;
+    background: #123b78;
+    color: white;
+}
+
+
+/* CONTAINER */
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 45px 0;
+}
+
+
+/* BRAND */
+.footer-brand {
+    flex: 1.5;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+}
+
+.footer-logo h2 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.footer-logo p {
+    margin: 4px 0 0;
+
+    color: #b9c9df;
+
+    font-size: 10px;
+}
+
+.footer-desc {
+    max-width: 350px;
+
+    margin-top: 18px;
+
+    color: #c7d4e7;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* MENU DAN KONTAK */
+.footer-menu,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 150px;
+}
+
+.footer h3 {
+    margin: 0 0 18px;
+
+    font-size: 14px;
+}
+
+.footer-menu a {
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    color: #c7d4e7;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.footer-menu a:hover {
+    color: #ff9932;
+}
+
+.footer-contact p {
+    margin: 0 0 10px;
+
+    color: #c7d4e7;
+
+    font-size: 11px;
+}
+
+
+/* COPYRIGHT */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+
+    padding: 15px;
+
+    color: #aebed3;
+
+    font-size: 10px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding: 35px 0;
+    }
+
+    .footer-brand {
+        flex: none;
+    }
+}
     </style>
     <div class="container2">
          <header>
@@ -130,7 +280,7 @@ nav a:hover {
             </div>
             <nav>
                 <a href="index.html">About</a>
-                <a href="jurusan.html">Jurusan</a>
+                <a href="jurusan.html" class="active">Jurusan</a>
                 <a href="eskul.html">Eskul</a>
             </nav>
         </header>
@@ -146,5 +296,51 @@ nav a:hover {
         </div>
         </div>
     </div>
+
+
+    <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Logo SMKN 1 Kota Bekasi">
+
+                <div>
+                    <h2>SMKN 1 KOTA BEKASI</h2>
+                    <p>Sekolah Kejuruan Unggul</p>
+                </div>
+            </div>
+
+            <p class="footer-desc">
+                Mewujudkan lulusan yang kompeten, berkarakter,
+                inovatif, dan siap menghadapi dunia industri.
+            </p>
+        </div>
+
+
+        <div class="footer-menu">
+            <h3>Menu</h3>
+
+            <a href="index.html">About</a>
+            <a href="jurusan.html">Jurusan</a>
+            <a href="eskul.html">Eskul</a>
+        </div>
+
+
+        <div class="footer-contact">
+            <h3>Kontak</h3>
+
+            <p>📍 Kota Bekasi, Jawa Barat</p>
+            <p>📞 (021) 88951151</p>
+            <p>✉️ info@smkn1kotabekasi.sch.id</p>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        <p>© 2026 SMKN 1 Kota Bekasi</p>
+    </div>
+</footer>
 </body>
 </html>

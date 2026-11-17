@@ -16,99 +16,132 @@
         }
         /* desain semua yang ada di body */
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #f4f7fb;
             color: #222;
         }
         /* menampilkan layar full */
         .container {
             width: 100%;
-            min-height: 100vh;
+            min-height: 10vh;
         }
         /* menyusun header dan nav bar */
         header {
-            width: 100%;
-            min-height: 70px;
-            background-color: #0d47a1;
-
-            display: flex;
-            justify-content: space-between;
+            background-color: #123b78;
             align-items: center;
-            padding: 10px 60px;
+            justify-content: space-between;
+            padding: 0 32px;
+            color: white;
+            display: flex;
+            height: 64px;
         }
 
         .logo {
-            display: flex;
             align-items: center;
             gap: 12px;
+            margin: 0;
+            font-weight: 700;
+            display: flex;
         }
 
         .logo img {
-            width: 70px;
-            height: 70px;
+            width: 40px;
             object-fit: contain;
+            height: 40px;
         }
 
         .logo p {
             color: white;
-            font-size: 20px;
+            font-weight: 700;
+            font-size: 16px;
         }
 
         nav {
+            align-items: center;
+            gap: 28px;
             display: flex;
-            gap: 30px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 20px;
-
-            padding: 10px 5px;
-
-            transition: 0.3s;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 22px 0;
+            position: relative;
         }
 
         nav a:hover {
-            color: #ffcc00;
+           color: #ff9932;
         }
+        .nav-menu a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            height: 2px;
+            background-color: #ffd43b;
+        }
+
 
         /* mengatur isi halaman */
         .body {
             width: 100%;
             padding: 60px 10%;
+            margin-bottom: 10px;
         }
 
-        .about {
-        width: 100%;
-        height: 800px;
-        margin: 60px auto;
+        .label {
+    display: inline-block;
 
-        background-color: white;
-        padding: 60px;
+    padding: 6px 12px;
 
-        border-radius: 15px;
+    background: #e8f0ff;
+    color: #164a9c;
 
-        display: flex;
-        align-items: center;
-        gap: 40px;
+    border-radius: 5px;
 
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.about {
+     width: 90%;
+    max-width: 1500px;
+    margin: 40px auto 0;
+    padding: 35px;
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    border-left: 4px solid #f4a62a;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px
         }
-
+        
         .teksA {
          flex: 1;
         }
 
         .judulA h1 {
         color: #0d47a1;
-        font-size: 50px;
-        margin-bottom: 5vh;
+        font-size: 37px;
+        margin-bottom: 3vh;
         }
 
         .isiA p {
-        font-size: 25px;
+        font-size: 20px;
         line-height: 1.7;
         text-align: justify;
         }
@@ -116,7 +149,7 @@
 
         .gambarsekolah img {
         width: 100%;
-        height: 550px;
+        height: 350px;
 
         object-fit: cover;
 
@@ -124,29 +157,295 @@
 
         display: block;
         }
+        
+
+
+
+        /* CONTAINER STATISTIK */
+.statistik {
+    width: 90%;
+    max-width: 1400px;
+    margin: 15px auto 50px;
+
+    display: flex;
+    gap: 15px;
+}
+
+
+/* CARD */
+.stat-card {
+    flex: 1;
+
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 34px 16px;
+
+    background: #ffffff;
+
+    border-radius: 9px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    box-sizing: border-box;
+}
+
+
+/* ICON */
+.stat-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    font-size: 26px;
+}
+
+
+/* WARNA ICON */
+.icon-blue {
+    background: #e5edff;
+    color: #2457c5;
+}
+
+.icon-orange {
+    background: #fff0df;
+    color: #e47d18;
+}
+
+.icon-green {
+    background: #e1f8e9;
+    color: #269b54;
+}
+
+.icon-purple {
+    background: #f1e6ff;
+    color: #8c40d1;
+}
+
+
+/* TEKS */
+.stat-info h3 {
+    margin: 0 0 4px;
+
+    color: #102d57;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.stat-info p {
+    margin: 0;
+
+    color: #7c8798;
+
+    font-size: 16px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .statistik {
+        width: 94%;
+
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .statistik {
+        flex-direction: column;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 60px;
+    background: #123b78;
+    color: white;
+}
+
+
+/* CONTAINER */
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 45px 0;
+}
+
+
+/* BRAND */
+.footer-brand {
+    flex: 1.5;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+}
+
+.footer-logo h2 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.footer-logo p {
+    margin: 4px 0 0;
+
+    color: #b9c9df;
+
+    font-size: 10px;
+}
+
+.footer-desc {
+    max-width: 350px;
+
+    margin-top: 18px;
+
+    color: #c7d4e7;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* MENU DAN KONTAK */
+.footer-menu,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 150px;
+}
+
+.footer h3 {
+    margin: 0 0 18px;
+
+    font-size: 14px;
+}
+
+.footer-menu a {
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    color: #c7d4e7;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.footer-menu a:hover {
+    color: #ff9932;
+}
+
+.footer-contact p {
+    margin: 0 0 10px;
+
+    color: #c7d4e7;
+
+    font-size: 11px;
+}
+
+
+/* COPYRIGHT */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+
+    padding: 15px;
+
+    color: #aebed3;
+
+    font-size: 10px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding: 35px 0;
+    }
+
+    .footer-brand {
+        flex: none;
+    }
+}
     </style>
 
 
 
 <!-- html -->
+ <section class="profil-box">
     <div class="container">
         <header>
             <div class="logo">
             <img src="images/logo.png" alt="logo smkn 1">
-            <p><b>SMKN 1 KOTA BEKASI</b></p> 
+            <p>SMKN 1 KOTA BEKASI</p> 
             </div>
-            <nav>
-                <a href="index.html">About</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="active">About</a>
                 <a href="jurusan.html">Jurusan</a>
                 <a href="eskul.html">Eskul</a>
             </nav>
         </header>
         
-        <div class="body">
+<div class="body">
             
     <div class="about">
-
+        <div class="content">
         <div class="teksA">
+            <span class="label">🎓 PROFIL</span>
 
             <div class="judulA">
                 <h1>Tentang SMKN 1 Kota Bekasi</h1>
@@ -163,16 +462,94 @@
                 dan kompetitif secara global.
                 </p>
             </div>
+        </div>
+        
+        <div class="gambarsekolah">
+            <img src="images/ftsekolah.jpeg" alt="foto sekolah">
+        </div>
 
+         
     </div> 
-
-    <div class="gambarsekolah">
-        <img src="images/ftsekolah.jpeg" alt="foto sekolah">
-    </div>
-
 </div>
+</section>
 
+<section class="statistik">
+    <div class="stat-card">
+        <div class="stat-icon icon-blue">🏅</div>
+        <div class="stat-info">
+            <h3>A (Unggul)</h3>
+            <p>Akreditasi Sekolah</p>
         </div>
     </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-orange">🤝</div>
+        <div class="stat-info">
+            <h3>20+ Mitra</h3>
+            <p>Dunia Usaha & Industri</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-green">🎓</div>
+        <div class="stat-info">
+            <h3>Siap Kerja</h3>
+            <p>Kompetensi</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-purple">🏆</div>
+        <div class="stat-info">
+            <h3>Berprestasi</h3>
+            <p>Tingkat Kota s/d Nasional</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Logo SMKN 1 Kota Bekasi">
+
+                <div>
+                    <h2>SMKN 1 KOTA BEKASI</h2>
+                    <p>Sekolah Kejuruan Unggul</p>
+                </div>
+            </div>
+
+            <p class="footer-desc">
+                Mewujudkan lulusan yang kompeten, berkarakter,
+                inovatif, dan siap menghadapi dunia industri.
+            </p>
+        </div>
+
+
+        <div class="footer-menu">
+            <h3>Menu</h3>
+
+            <a href="index.html">About</a>
+            <a href="jurusan.html">Jurusan</a>
+            <a href="eskul.html">Eskul</a>
+        </div>
+
+
+        <div class="footer-contact">
+            <h3>Kontak</h3>
+
+            <p>📍 Kota Bekasi, Jawa Barat</p>
+            <p>📞 (021) 88951151</p>
+            <p>✉️ info@smkn1kotabekasi.sch.id</p>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        <p>© 2026 SMKN 1 Kota Bekasi</p>
+    </div>
+</footer>
 </body>
 </html>
